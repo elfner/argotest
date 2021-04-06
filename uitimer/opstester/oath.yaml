@@ -3,7 +3,7 @@ kind: OAuth
 metadata:
   annotations:
   name: cluster
-  resourceVersion: "13418552"
+  resourceVersion: "13418903"
   selfLink: /apis/config.openshift.io/v1/oauths/cluster
   uid: da748ae4-c770-4408-abe9-acf3606aaa56
 spec:
