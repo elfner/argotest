@@ -45,5 +45,5 @@ spec:
     name: local_ldap
     type: LDAP
   tokenConfig:
-    accessTokenInactivityTimeoutSeconds: 3600
-    accessTokenMaxAgeSeconds: 3600
+    accessTokenInactivityTimeoutSeconds: 3601
+    accessTokenMaxAgeSeconds: 3500
