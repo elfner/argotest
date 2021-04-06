@@ -19,8 +19,8 @@
       }
     ],
     "tokenConfig": {
-      "accessTokenMaxAgeSeconds": 86400,
-      "accessTokenInactivityTimeoutSeconds": 900
+      "accessTokenMaxAgeSeconds": 86500,
+      "accessTokenInactivityTimeoutSeconds": 800
     }
   }
 }
