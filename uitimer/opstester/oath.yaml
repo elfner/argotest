@@ -1,0 +1,46 @@
+apiVersion: config.openshift.io/v1
+kind: OAuth
+metadata:
+  name: cluster
+  selfLink: /apis/config.openshift.io/v1/oauths/cluster
+spec:
+  identityProviders:
+  - ldap:
+      attributes:
+        email:
+        - mail
+        id:
+        - dn
+        name:
+        - cn
+        preferredUsername:
+        - uid
+      bindDN: CN=Service OpenShiftContainerPlatform,OU=Service Accounts,OU=FDC,DC=test,DC=fdc,DC=ibm
+      bindPassword:
+        name: ldap-secret-scgtest-ldap
+      insecure: true
+      url: ldap://10.0.131.11:389/DC=test,DC=fdc,DC=ibm?uid?sub?(objectcategory=user)
+    mappingMethod: claim
+    name: scgtest-ldap
+    type: LDAP
+  - ldap:
+      attributes:
+        email:
+        - mail
+        id:
+        - dn
+        name:
+        - cn
+        preferredUsername:
+        - uid
+      bindDN: cn=Manager,dc=example,dc=com
+      bindPassword:
+        name: ldap-demo
+      insecure: true
+      url: ldap://10.0.128.202:31452/DC=example,DC=com?uid?sub?(objectclass=*)
+    mappingMethod: claim
+    name: local_ldap
+    type: LDAP
+  tokenConfig:
+    accessTokenInactivityTimeoutSeconds: 3600
+    accessTokenMaxAgeSeconds: 3600
