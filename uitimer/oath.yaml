@@ -1,13 +1,26 @@
-apiVersion: config.openshift.io/v1
-kind: OAuth
-spec:
-  identityProviders:
-  - htpasswd:
-      fileData:
-        name: htpass-secret
-    mappingMethod: claim
-    name: developer
-    type: HTPasswd
-  tokenConfig:
-    accessTokenMaxAgeSeconds: 86400
-    accessTokenInactivityTimeoutSeconds: 900
+{
+  "apiVersion": "config.openshift.io/v1",
+  "kind": "OAuth",
+  "metadata": {
+    "name": "cluster",
+    "selfLink": "/apis/config.openshift.io/v1/oauths/cluster"
+  },
+  "spec": {
+    "identityProviders": [
+      {
+        "htpasswd": {
+          "fileData": {
+            "name": "htpass-secret"
+          }
+        },
+        "mappingMethod": "claim",
+        "name": "developer",
+        "type": "HTPasswd"
+      }
+    ],
+    "tokenConfig": {
+      "accessTokenMaxAgeSeconds": 86400,
+      "accessTokenInactivityTimeoutSeconds": 900
+    }
+  }
+}
