@@ -12,5 +12,5 @@ spec:
     name: developer
     type: HTPasswd
   tokenConfig:
-    accessTokenInactivityTimeoutSeconds: 907
-    accessTokenMaxAgeSeconds: 76400
+    accessTokenInactivityTimeoutSeconds: 900
+    accessTokenMaxAgeSeconds: 86400
