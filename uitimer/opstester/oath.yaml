@@ -2,7 +2,7 @@ apiVersion: config.openshift.io/v1
 kind: OAuth
 metadata:
   name: cluster
-  resourceVersion: '13421152'
+  resourceVersion: '13428335'
   annotations:
     argocd.argoproj.io/sync-options: Prune=false
 spec:
